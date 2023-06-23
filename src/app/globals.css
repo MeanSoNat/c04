@@ -8,20 +8,65 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.card {
+  display: flex;
+  border-radius: 5px;
+  justify-content: center;
+  width: 20rem;
+  height: 15rem;
+  margin: 2rem;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgb(10, 8, 48) 0%,
+    rgba(9, 9, 121, 1) 50%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+.card-id {
+  background-color: rgb(187, 168, 168);
+  border-radius: 5px 0px 8px 0px;
+  width: 40px;
+  top: 0;
+  left: 0;
+  color: white;
+  padding-left: 12px;
+  font-weight: 500;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.card-title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: azure;
+  padding: 3px;
+  border-radius: 0px 8px 0px 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.card-image {
+  width: 18rem;
+  right: 15rem;
+  object-fit: contain;
+  transition: all 0.5s ease;
+  filter: none;
+  -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -ms-filter: blur(0px);
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='0');
+}
+.card-image:hover {
+  filter: drop-shadow(1px -1px 3px white);
+}
+
+.card-next {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(0, 255, 42);
+  padding-inline: 10px;
+  border-radius: 5px 0px 8px 0px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
