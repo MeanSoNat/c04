@@ -2,6 +2,10 @@ import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 import React from "react";
 import Styles from "./style.module.css";
 import Image from "next/image";
+export const metadata = {
+  title: 'PokemonDetails',
+  description: 'Data for Pokemon',
+}
 const Pokemon = async ({ params }) => {
   const id = params.id;
   return (
